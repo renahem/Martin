@@ -10,37 +10,43 @@
       background-color: #f5f3fa;
       color: #1a1a1a;
       margin: 0;
-      padding: 0;
+      line-height: 1.6;
     }
     header {
       background-color: #0d1b2a;
       color: #fff;
       padding: 40px 20px;
       text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1581579181639-fbcb0c9915f1?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
       position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(13, 27, 42, 0.75);
+      z-index: 0;
     }
     header img {
       max-width: 120px;
       margin-bottom: 20px;
-      opacity: 0.2;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 0;
+      position: relative;
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-      position: relative;
-      z-index: 1;
+      font-size: 3rem;
     }
     header p {
       color: #d4af37;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 10px;
-      position: relative;
-      z-index: 1;
     }
     section {
       padding: 40px 20px;
@@ -49,18 +55,18 @@
     }
     h2 {
       color: #0d1b2a;
-      margin-top: 0;
+      margin-bottom: 15px;
     }
-    .services,
-    .contact,
-    .about,
-    .form,
-    .testimonials {
+    .services, .contact, .about, .form, .testimonials, .pricing {
       background-color: #ffffff;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      padding: 25px 30px;
+      margin-top: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
     }
     footer {
       background-color: #0d1b2a;
@@ -68,45 +74,47 @@
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
+      margin-top: 50px;
     }
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 16px;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 18px;
       border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
+      border-radius: 6px;
+      font-size: 1rem;
     }
     button {
       background-color: #0d1b2a;
       color: #fff;
-      padding: 10px 20px;
+      padding: 12px 28px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transition: background-color 0.3s ease;
     }
     button:hover {
-      background-color: #162d50;
+      background-color: #1a2a45;
     }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #0d1b2a;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      section {
+        padding: 25px 15px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="A_logo_design_for_a_cleaning_service_named_Rena_H.png" alt="Rena Hem logotyp" />
+    <img src="https://images.unsplash.com/photo-1581579181639-fbcb0c9915f1?auto=format&fit=crop&w=120&q=80" alt="Rena Hem logotyp" />
     <h1>Rena Hem</h1>
     <p>Din pålitliga städhjälp i Torrevieja</p>
   </header>
@@ -120,10 +128,20 @@
     <div class="services">
       <h2>Våra tjänster</h2>
       <ul>
-        <li>Airbnb-städning (inkl. bäddning och förbrukningspåfyllning) – 25€ / gång</li>
-        <li>Veckostädning – 40€ / gång</li>
-        <li>Inför- och efterbesiktning för uthyrning – 30€ / gång</li>
-        <li>Fönsterputs och extra storstädning – 50€ och uppåt</li>
+        <li>Airbnb-städning (inkl. bäddning och förbrukningspåfyllning)</li>
+        <li>Veckostädning</li>
+        <li>Inför- och efterbesiktning för uthyrning</li>
+        <li>Fönsterputs och extra storstädning</li>
+      </ul>
+    </div>
+
+    <div class="pricing">
+      <h2>Priser</h2>
+      <ul>
+        <li>Airbnb-städning: 30 €</li>
+        <li>Veckostädning: 25 €</li>
+        <li>Fönsterputs: 40 €</li>
+        <li>Storstädning: 60 €</li>
       </ul>
     </div>
 
